@@ -1,5 +1,5 @@
 # trusted-crypto
-Trusted crypto library [![Build status][travis-image]][travis-url]
+Trusted crypto library [![Build Status](https://travis-ci.org/algv/trusted-crypto.svg?branch=master&style=flat)](https://travis-ci.org/algv/trusted-crypto)
 
 # Установка зависимостей
 
@@ -56,5 +56,3 @@ brew install ossp-uuid
 ## Полезные ссылки
 
 - [Обновление NodeJS на Linux](https://davidwalsh.name/upgrade-nodejs)
-
-[travis-image]: https://travis-ci.org/algv/trusted-crypto.svg?branch=master
