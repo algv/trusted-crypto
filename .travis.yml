@@ -21,6 +21,9 @@ addons:
       - g++-4.7
 
 before_install:
+  - npm install -g typescript
+  - npm install -g tsd
+  - npm install -g mocha
   - node --version
   - npm --version
   - gcc --version
