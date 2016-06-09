@@ -67,6 +67,14 @@
                 "src/wrapper/cms/signed_data.cpp",
                 "src/jsoncpp/jsoncpp.cpp"
             ],
+            'xcode_settings': {
+                'OTHER_CPLUSPLUSFLAGS': [
+                    '-std=c++11'
+                ],
+                'OTHER_LDFLAGS': [],
+                'GCC_ENABLE_CPP_EXCEPTIONS': 'NO',
+                'MACOSX_DEPLOYMENT_TARGET': '10.7'
+            },
             "conditions": [
                 [
                     "OS=='win'",
