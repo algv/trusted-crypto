@@ -120,7 +120,7 @@
             "include_dirs": [
                 "<!(node -e \"require('nan')\")"
             ],
-            "cflags": [ "-fno-exceptions" ],
+            "cflags": [ ],
             "cflags_cc!": [
                 "-fno-rtti",
                 "-fno-exceptions"
