@@ -67,9 +67,9 @@
                 "src/wrapper/cms/signed_data.cpp",
                 "src/jsoncpp/jsoncpp.cpp"
             ],
-            'xcode_settings': {
-                'OTHER_LDFLAGS': [],
-                'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
+            "xcode_settings": {
+                "OTHER_LDFLAGS": [],
+                "GCC_ENABLE_CPP_EXCEPTIONS": "YES"
             },
             "conditions": [
                 [
@@ -113,7 +113,9 @@
                             "<(node_root_dir)/deps/openssl/openssl/include"
                         ],
 
-                        "defines": [ "UNIX" ]
+                        "defines": [ "UNIX" ],
+
+                        "cflags_cc+": [ "-std=c++0x" ]
                     }
                 ]
             ],
@@ -124,12 +126,7 @@
             "cflags_cc!": [
                 "-fno-rtti",
                 "-fno-exceptions"
-            ],
-			['OS!="win"', {
-				'cflags_cc+': [
-				    '-std=c++0x'
-			]
-}]
+            ]
         }
     ]
 }
