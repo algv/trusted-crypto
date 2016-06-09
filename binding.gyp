@@ -124,7 +124,12 @@
             "cflags_cc!": [
                 "-fno-rtti",
                 "-fno-exceptions"
-            ]
+            ],
+			['OS!="win"', {
+				'cflags_cc+': [
+				    '-std=c++0x'
+			]
+}]
         }
     ]
 }
