@@ -69,7 +69,7 @@
             ],
             'xcode_settings': {
                 'OTHER_LDFLAGS': [],
-                'GCC_ENABLE_CPP_EXCEPTIONS': 'NO'
+                'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
             },
             "conditions": [
                 [
