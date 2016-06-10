@@ -68,6 +68,9 @@
                 "src/jsoncpp/jsoncpp.cpp"
             ],
             "xcode_settings": {
+                "OTHER_CPLUSPLUSFLAGS": [
+                    "-std=c++11"
+                ],
 				"OTHER_LDFLAGS": [],
 				"GCC_ENABLE_CPP_EXCEPTIONS": "YES",
 				"GCC_ENABLE_CPP_RTTI": "YES"
