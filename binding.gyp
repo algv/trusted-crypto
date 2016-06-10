@@ -68,8 +68,9 @@
                 "src/jsoncpp/jsoncpp.cpp"
             ],
             "xcode_settings": {
-                "OTHER_LDFLAGS": [],
-                "GCC_ENABLE_CPP_EXCEPTIONS": "YES"
+				"OTHER_LDFLAGS": [],
+				"GCC_ENABLE_CPP_EXCEPTIONS": "YES",
+				"GCC_ENABLE_CPP_RTTI": "YES"
             },
             "conditions": [
                 [
