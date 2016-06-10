@@ -119,7 +119,8 @@
                             "<(node_root_dir)/deps/openssl/openssl/include"
                         ],
 
-                        "defines": [ "UNIX" ]
+                        "defines": [ "UNIX" ],
+
                     }
                 ]
             ],
