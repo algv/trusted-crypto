@@ -4,7 +4,9 @@
 
   platform:
     - x64
+      BITS: 64
     - x86
+      BITS: 32
 
   version: "{build}"
 
