@@ -22,9 +22,9 @@
       - nodejs_version: 6
 
   script:
-    - npm install -g typescript
-    - npm install -g tsd
-    - npm install -g mocha
+    - npm install typescript
+    - npm install tsd
+    - npm install mocha
     - npm install
 
   test_script:
