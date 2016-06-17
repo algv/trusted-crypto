@@ -22,6 +22,8 @@
       - nodejs_version: 6
 
   install:
+    - ps: Start-FileDownload "http://slproweb.com/download/Win${env:BITS}OpenSSL-1_0_2h.exe"
+    - Win%BITS%OpenSSL-1_0_2h.exe /SILENT /VERYSILENT /SP- /DIR="C:\openssl"
     - node --version
     - npm --version
     - npm install -g typescript
