@@ -4,9 +4,7 @@
 
   platform:
     - x64
-      BITS: 64
     - x86
-      BITS: 32
 
   version: "{build}"
 
@@ -22,6 +20,10 @@
       - nodejs_version: 4
       - nodejs_version: 5
       - nodejs_version: 6
+      - platform: x64
+        BITS: 64
+      - platform: x86
+        BITS: 32
 
   install:
     - ps: Start-FileDownload "http://slproweb.com/download/Win${env:BITS}OpenSSL-1_0_2h.exe"
