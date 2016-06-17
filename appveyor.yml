@@ -17,26 +17,23 @@
   environment:
     matrix:
       - nodejs_version: 0.12
-      - nodejs_version: 1.0
-      - nodejs_version: 1
-      - nodejs_version: 2
-      - nodejs_version: 3
       - nodejs_version: 4
       - nodejs_version: 5
       - nodejs_version: 6
 
-  install:
-    - node --version
-    - npm --version
-    - npm install
+  before_install:
+    - npm install -g typescript
+    - npm install -g tsd
+    - npm install -g mocha
 
-  test_script:
+  script:
+    - npm install
     - npm test
 
   deploy:
     provider: GitHub
     auth_token:
-        secure: 7a263d0d36b04b3a713afbe86d781c37e90a9403
+        secure: f7734918d31d322cb25f2ea530b3dcbec60a9a91
     on:
         branch: master
         appveyor_repo_tag: true
