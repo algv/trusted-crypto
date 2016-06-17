@@ -1,0 +1,43 @@
+  os: Visual Studio 2013
+
+  configuration: release
+
+  platform:
+    - x64
+    - x86
+
+  version: "{build}"
+
+  clone_folder: c:\projects\trusted-crypto
+
+  cache:
+    - '%userprofile%\.node-gyp'
+    - '%AppData%\npm-cache'
+
+  environment:
+    matrix:
+      - nodejs_version: 0.12
+      - nodejs_version: 1.0
+      - nodejs_version: 1
+      - nodejs_version: 2
+      - nodejs_version: 3
+      - nodejs_version: 4
+      - nodejs_version: 5
+      - nodejs_version: 6
+
+  install:
+    - node --version
+    - npm --version
+    - npm install
+
+  test_script:
+    - npm test
+
+  deploy:
+    provider: GitHub
+    auth_token:
+        secure: 7a263d0d36b04b3a713afbe86d781c37e90a9403
+    on:
+        branch: master
+
+  appveyor_repo_tag: true
