@@ -1,11 +1,11 @@
 #include "../stdafx.h"
 
-#include "wmicrosoft.h"
+#include "wcryptopro.h"
 
-void WProviderMicrosoft::Init(v8::Handle<v8::Object> exports){
+void WProviderCryptopro::Init(v8::Handle<v8::Object> exports){
 	METHOD_BEGIN();
 
-	v8::Local<v8::String> className = Nan::New("ProviderMicrosoft").ToLocalChecked();
+	v8::Local<v8::String> className = Nan::New("ProviderCryptopro").ToLocalChecked();
 
 	// Basic instance setup
 	v8::Local<v8::FunctionTemplate> tpl = Nan::New<v8::FunctionTemplate>(New);
@@ -21,12 +21,12 @@ void WProviderMicrosoft::Init(v8::Handle<v8::Object> exports){
 	exports->Set(className, tpl->GetFunction());
 }
 
-NAN_METHOD(WProviderMicrosoft::New){
+NAN_METHOD(WProviderCryptopro::New){
 	METHOD_BEGIN();
 
 	try{
-		WProviderMicrosoft *obj = new WProviderMicrosoft();
-		obj->data_ = new ProviderMicrosoft();
+		WProviderCryptopro *obj = new WProviderCryptopro();
+		obj->data_ = new ProviderCryptopro();
 
 		obj->Wrap(info.This());
 
@@ -36,14 +36,14 @@ NAN_METHOD(WProviderMicrosoft::New){
 	TRY_END();
 }
 
-NAN_METHOD(WProviderMicrosoft::GetKey){
+NAN_METHOD(WProviderCryptopro::GetKey){
 	METHOD_BEGIN();
 
 	try{
 		LOGGER_ARG("cert");
 		WCertificate * wCert = WCertificate::Unwrap<WCertificate>(info[0]->ToObject());
 
-		UNWRAP_DATA(ProviderMicrosoft);
+		UNWRAP_DATA(ProviderCryptopro);
 
 		Handle<Key> key = _this->getKey(wCert->data_);
 

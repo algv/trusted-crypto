@@ -1,7 +1,7 @@
-#ifndef WMICROSOFT_H_INCLUDED
-#define WMICROSOFT_H_INCLUDED
+#ifndef WCRYPTOPRO_H_INCLUDED
+#define WCRYPTOPRO_H_INCLUDED
 
-#include "../../wrapper/store/provider_microsoft.h"
+#include "../../wrapper/store/provider_cryptopro.h"
 
 #include <nan.h>
 #include "../utils/wrap.h"
@@ -10,14 +10,14 @@
 #include "../pki/wcert.h"
 #include "../pki/wkey.h"
 
-WRAP_CLASS(ProviderMicrosoft){
+WRAP_CLASS(ProviderCryptopro){
 public:
-	WProviderMicrosoft(){};
-	~WProviderMicrosoft(){};
+	WProviderCryptopro(){};
+	~WProviderCryptopro(){};
 
 	static void Init(v8::Handle<v8::Object>);
 	static NAN_METHOD(New);
 	static NAN_METHOD(GetKey);
 };
 
-#endif //WMICROSOFT_H_INCLUDED
+#endif //WCRYPTOPRO_H_INCLUDED

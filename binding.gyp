@@ -107,7 +107,7 @@
                         "include_dirs": [
                             "<(openssl_root)/include"
                         ],
-                        "defines": [ "CTWRAPPER_STATIC" ],
+                        "defines": [ "CTWRAPPER_STATIC", "OPENSSL_NO_CTGOSTCP" ],
                         "msbuild_settings": {
                             "Link": {
                                 "ImageHasSafeExceptionHandlers": "false"
@@ -119,7 +119,7 @@
                             "<(node_root_dir)/deps/openssl/openssl/include"
                         ],
 
-                        "defines": [ "UNIX" ],
+                        "defines": [ "UNIX", "OPENSSL_NO_CTGOSTCP" ],
 
                         "cflags_cc+": [ "-std=c++11" ]
                     }

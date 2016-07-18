@@ -4,10 +4,10 @@ import * as object from "../object";
 import {Certificate} from "../pki/cert";
 import {Key} from "../pki/key";
 
-export class ProviderMicrosoft extends object.BaseObject<native.PKISTORE.ProviderMicrosoft> {
+export class ProviderCryptopro extends object.BaseObject<native.PKISTORE.ProviderCryptopro> {
     constructor() {
         super();
-        this.handle = new native.PKISTORE.ProviderMicrosoft();
+        this.handle = new native.PKISTORE.ProviderCryptopro();
     }
 
     public getKey(cert: Certificate) {

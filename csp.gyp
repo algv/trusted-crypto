@@ -107,7 +107,7 @@
                         "include_dirs": [
                             "<(openssl_root)/include"
                         ],
-                        "defines": [ "CTWRAPPER_STATIC" ],
+                        "defines": [ "CTWRAPPER_STATIC", "OPENSSL_NO_CTGOSTCP" ],
                         "msbuild_settings": {
                             "Link": {
                                 "ImageHasSafeExceptionHandlers": "false"
@@ -115,6 +115,10 @@
                         }
                     },
                     {
+                        "sources": [
+                            "src/node/store/wcryptopro.cpp",
+                            "src/wrapper/store/provider_cryptopro.cpp"
+                        ],
                         "conditions": [
                             [
                                 "target_arch=='x64'",
@@ -141,7 +145,7 @@
                             "/opt/cprocsp/include"
                         ],
 
-                        "defines": [ "UNIX", "CPROCSP" ],
+                        "defines": [ "UNIX", "CPROCSP", "OPENSSL_NO_CTGOSTCP" ],
 
                         "cflags_cc+": [ "-std=c++11" ]
                     }
