@@ -30,7 +30,7 @@
     - npm install -g typescript
     - npm install -g typings
     - npm install -g mocha
-    - typings install && node-gyp configure --openssl_root=OPENSSL_LIB_DIR && node-gyp build && tsc
+    - npm install --openssl_root=OPENSSL_LIB_DIR
 
   test_script:
     - npm test
