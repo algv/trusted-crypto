@@ -30,7 +30,7 @@
     - npm install -g typescript
     - npm install -g typings
     - npm install -g mocha
-    - npm install --openssl_root=OPENSSL_LIB_DIR
+    - npm install --openssl_root="%OPENSSL_LIB_DIR%"
 
   test_script:
     - npm test
