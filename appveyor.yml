@@ -1,3 +1,4 @@
+ -
   os: Visual Studio 2013
 
   configuration: release
@@ -16,23 +17,18 @@
     - '%AppData%\npm-cache'
 
   environment:
-    PLATFORM: x86
-      BITS: 32
-    PLATFORM: x64
-      BITS: 64
     matrix:
-      - nodejs_version: 0.12
       - nodejs_version: 4
       - nodejs_version: 5
       - nodejs_version: 6
 
   install:
-    - ps: Start-FileDownload "http://slproweb.com/download/Win${env:BITS}OpenSSL-1_0_2h.exe"
-    - Win%BITS%OpenSSL-1_0_2h.exe /SILENT /VERYSILENT /SP- /DIR="C:\openssl"
+    - if "%PLATFORM%"=="x86" SET openssl_root='C:\OpenSSL-Win32'
+    - if "%PLATFORM%"=="x64" SET openssl_root='C:\OpenSSL-Win64'
     - node --version
     - npm --version
     - npm install -g typescript
-    - npm install -g tsd
+    - npm install -g typings
     - npm install -g mocha
     - npm install
 
