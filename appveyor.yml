@@ -23,14 +23,14 @@
       - nodejs_version: 6
 
   install:
-    - if "%PLATFORM%"=="x86" SET openssl_root='C:\OpenSSL-Win32'
-    - if "%PLATFORM%"=="x64" SET openssl_root='C:\OpenSSL-Win64'
+    - if "%PLATFORM%"=="x86" SET OPENSSL_LIB_DIR=C:/OpenSSL-Win32
+    - if "%PLATFORM%"=="x64" SET OPENSSL_LIB_DIR=C:/OpenSSL-Win64
     - node --version
     - npm --version
     - npm install -g typescript
     - npm install -g typings
     - npm install -g mocha
-    - npm install
+    - typings install && node-gyp configure --openssl_root=OPENSSL_LIB_DIR && node-gyp build && tsc
 
   test_script:
     - npm test
